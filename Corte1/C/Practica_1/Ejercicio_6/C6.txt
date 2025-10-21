@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<time.h>
+
+int main(){
+	int valor, ganancia;
+	srand(time(NULL));
+	printf("Digite el valor de la apuesta\n");
+	scanf("%d", &valor);
+	int resultado_moneda = (rand()%2)+1;
+	switch (resultado_moneda) {
+		case 1:
+			ganancia= 2*valor;
+			printf("Ganas un total de: %d", ganancia);
+			break;
+		case 2:
+			printf("Perdiste todo");
+			break;
+		}
+}
