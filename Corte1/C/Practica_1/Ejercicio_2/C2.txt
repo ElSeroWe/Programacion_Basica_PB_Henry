@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int unidades;
+    float precio, P_total;
+    char producto[50], seguimos;
+    do {
+        printf("Digite nombre del producto:\n");
+        scanf("%s", producto);
+        printf("Digite el precio por unidad:\n");
+        scanf("%f", &precio);
+        printf("Digite el numero de unidades vendidas:\n");
+        scanf("%d", &unidades);
+        P_total= precio * unidades;
+        printf("Nombre del producto: %s\nNumero de unidades vendidas: %d\nPrecio total: %f\n", producto, unidades, P_total);
+        printf("Desea registrar otro producto? s/n:\n ");
+        scanf("%c", &seguimos);
+    } while(seguimos == 's');
+}
