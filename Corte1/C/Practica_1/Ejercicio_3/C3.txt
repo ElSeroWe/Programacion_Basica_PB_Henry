@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+	int horas;
+	float valor_por_hora, sueldo_bruto, retencion, sueldo_neto;
+	char nombre_trabajador[50], seguimos;
+	printf("Digite el nombre del trabajador:\n");
+	scanf("%s", &nombre_trabajador);
+	printf("Digite el numero de horas trabajadas:\n");
+	scanf("%d", &horas);
+	printf("Digite valor por horas:\n");
+	scanf("%f", &valor_por_hora);
+	sueldo_bruto= valor_por_hora*horas;
+	retencion= sueldo_bruto*0.05;
+	sueldo_neto = sueldo_bruto - retencion;
+	printf("Nombre del trabajador: %s\nSueldo bruto: %f\nRetencion total: %f\nSueldo neto: %\n", nombre_trabajador, sueldo_bruto, retencion, sueldo_neto);
+}
