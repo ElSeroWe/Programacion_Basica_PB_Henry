@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+	int A, B;
+	printf("Digite los 2 numeros:\n");
+	scanf("%d,%d", &A, &B);
+	if (A>B){
+		printf("El numero mayor es: %d", A);
+	} else if (A<B){
+		printf("El numero mayor es: %d", B);
+	} else {
+		printf("Los dos numeros son iguales");
+		}
+	return 0;
+} 
