@@ -1,0 +1,47 @@
+#include <math.h>
+
+	int main(){
+	int opcion;
+	float Area, Perimetro, base, altura, radio, lado1, lado2;
+	char seguimos;
+	do{
+		printf ("Seleccione el area y perimetro a sacar:\n 1. Cuadrado\n 2. Rectangulo\n 3. Triangulo\n 4. Circulo\n");
+		scanf ("%d", &opcion);
+		switch(opcion){
+			case 1: //Cuadrado
+				printf("Digite valor de la base y la altura:\n");
+				scanf("%f, %f", &base, &altura);
+				Area= base*altura;
+				Perimetro= 4*base;
+				printf("El area es %f, y el perimetro es %f", Area, Perimetro);
+				break;
+			case 2: //Rectangulo
+				printf("Digite valor de la base y la altura:\n");
+				scanf("%f, %f", &base, &altura);
+				Area= base*altura;
+				Perimetro= 2*base+2*altura;
+				printf("El area es %f, y el perimetro es %f", Area, Perimetro);
+				break;
+			case 3: //Triangulo
+				printf("Digite valor de la base, la altura, el lado 1 y 2:\n");
+				scanf("%f, %f, %f, %f", &base, &altura, &lado1, &lado2);
+				Area= (base*altura)/2;
+				Perimetro= base+lado1+lado2;
+				printf("El area es %f, y el perimetro es %f", Area, Perimetro);
+				break;
+			case 4: //Circulo
+				printf("Digite el radio:\n");
+				scanf("%f", &radio);
+				Area= 3.1416*pow(radio,2);
+				Perimetro= 2*3.1416*radio;
+				printf("El area es %f, y el perimetro es %f", Area, Perimetro);
+				break;
+			default:
+				printf("ERROR");
+							
+		}
+		printf("\nDesea hacer otra figura? s/n");
+		scanf ("%c", &seguimos);
+		
+	} while(seguimos == 's');
+	}
