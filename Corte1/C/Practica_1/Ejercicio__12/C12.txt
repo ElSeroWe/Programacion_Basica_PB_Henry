@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int n, m=0, r;
+int main() {
+        printf("Digite el numero para saber su tabla de multiplicar:\n");
+        scanf("%d",&n);{
+          for(m=0;m<11;m++){
+                r=n*m;
+                printf("%dx%d=%d\n", n,m,r);
+             }
+        }
+        return 0;
+}
