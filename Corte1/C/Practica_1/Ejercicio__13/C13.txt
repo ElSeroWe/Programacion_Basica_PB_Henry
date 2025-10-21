@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+  int lista, i;
+  float num, suma=0, promedio;
+  printf("Cual va a ser el numero de datos de la lista:\n");
+  scanf("%d",&lista);
+  for(i=1; i<= lista; i++){
+      printf("Ingrese un dato:\n");
+      scanf("%f",&num);
+      suma=suma+num;
+  }
+  promedio= suma/lista;
+  printf("El promedio de todos sus datos es: %f",promedio);
+    return 0;
+}
