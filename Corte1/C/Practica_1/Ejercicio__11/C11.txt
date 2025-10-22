@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int intentos=0, correct =0, i;
+    char pswr[]="aaaa", usr[10];
+    do {
+        printf("Digite la contraseña:\n");
+        scanf("%s", &usr); 
+        int p = strlen(pswr), u = strlen(usr); 
+        if (p == u) {
+            for (i = 0; i < p; i++) {
+                if (usr[i] == pswr[i]) {
+                    correct++;
+                }
+            }
+            if (correct == p) {
+                printf("Su contraseña es correcta\n");
+                return 0;
+            } else {
+                printf("Contraseña incorrecta, intente de nuevo\n");
+            }
+        } else {
+            printf("Contraseña incorrecta, intente de nuevo\n");
+        }
+        intentos++;
+    } while (intentos < 3);
+
+    return 0;
+}
