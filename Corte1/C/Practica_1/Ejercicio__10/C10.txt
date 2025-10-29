@@ -6,18 +6,20 @@ int main() {
     int generado, intento, intentos = 0;
     srand(time(NULL));
     generado= rand() % 10 + 1;
-    printf("Adivina un numero entre 1 y 10\n");
-    printf("Ingresa el numero: ");
-    scanf("%d", &intento);
-    intentos++;
-    if (intento < 1 || intento > 10) {
+    printf("Adivina un numero entre 1 y 10:\n");
+    do{
+        printf("Ingresa el numero: ");
+        scanf("%d", &intento);
+        intentos++;
+        if (intento < 1 || intento > 10) {
             printf("Numero fuera del rango. Debe estar entre 1 y 10.\n");
-    } else if (intento < generado) {
-            printf("El numero debe ser mayor, intente otra vez");
-    } else if (intento > generado) {
-            printf("El numero debe ser menor, intente otra vez");
-    } else {
+        } else if (intento < generado) {
+            printf("El numero debe ser mayor, intente otra vez\n");
+        } else if (intento > generado) {
+            printf("El numero debe ser menor, intente otra vez\n");
+        } else {
             printf("Adivinaste el número en %d intento(s).\n", intentos);
-    }
+        }
+    } while (intento!=generado);  
     return 0;
 }
