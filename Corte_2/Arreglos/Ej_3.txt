@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 int main(){
-	int i,xd,a,j;
+	int i,xd,a,j,k,min;
 	printf("Digite la cantidad de elementos que va a tener el vector: ");
 	scanf("%d",&xd);
 	printf("Digite la cantidad de elementos que va a tener el vector: ");
@@ -10,16 +10,26 @@ int main(){
 	for(i=0;i<xd;i++){
 		printf("Digite el valor del arreglo en V1: \n");
 		scanf("%d",&V1[i]);}
-	for(j=0;j<xd;j++){
+	for(j=0;j<a;j++){
 		printf("Digite el valor del arreglo en V2: \n");
 		scanf("%d",&V2[j]);}
 	printf("Los valores del arreglo 1 son: ");
 	for(i=0;i<xd;i++){
 		printf("%d", V1[i]);
 	}
-	printf("Los valores del arreglo 2 son: ");
-	for(i=0;i<xd;i++){
+	printf("\nLos valores del arreglo 2 son: ");
+	for(j=0;j<a;j++){
 		printf("%d", V2[j]);
 	}
+	printf("\nLa suma de los 2 vectores da: ");
+	if(i<j){
+		min=i;
+	} else{
+		min=j;
+	}
+	int V3[min];
+	for(k=0;k<min;k++){
+		V3[k]=V1[k]+V2[k];
+		printf("%d", V3[k]);}
 	return 0;
 }
