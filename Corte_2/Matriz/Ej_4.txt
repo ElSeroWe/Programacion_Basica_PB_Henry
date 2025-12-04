@@ -1,5 +1,5 @@
-
-
+#include <stdio.h>
+#include <stdlib.h>
 int main()
 {
     int fil,col,f,c,cont,max,dat,sum=0;
