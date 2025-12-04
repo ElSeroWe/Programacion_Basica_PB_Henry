@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+        int cont=0,fil,col,f,c;
+        do{
+                printf("Digite filas y columnas de su matriz (n,m)\n");
+                scanf("%d,%d",&fil,&col);
+                int v1[fil][col];
+                for(f=0;f<fil;f++){
+                        for(c=0;c<col;c++){
+                                printf("\nDigite el valor %d %d de su matriz",f,c);
+                                scanf("%d",&v1[f][c]);
+                        }
+                }
+                printf("\nLa matriz es: \n");
+                for(f=0;f<fil;f++){
+                        for(c=0;c<col;c++){
+                                printf("|%d|",v1[f][c]);
+                        }printf("\n");
+                }
+                printf("\nDesea continuar? 0=Si, 1=No: ");
+                scanf("%d",&cont);
+        }while (cont==0);
+        return 0;
+}
