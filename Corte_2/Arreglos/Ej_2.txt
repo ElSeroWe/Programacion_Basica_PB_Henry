@@ -1,27 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
-int main() {	
-	int n;
-	int suma=0;
-	int M1[n][n];
-	int i,j;
-	for (i=0;i<n;i++){
-		for(j=0;j<n;j++){
-			printf("Digite valores para la matriz:\n");
-			scanf("%d", &M1[i][j]);
-		}
+int main(){
+	int i,xd;
+	printf("Digite la cantidad de elementos que va a tener el vector: ");
+	scanf("%d",&xd);
+	int V1[xd];
+	for(i=0;i<xd;i++){
+		printf("Digite el valor del arreglo: \n");
+		scanf("%d",&V1[i]);
+		if (V1[i]%2==0){
+			printf("Numero aceptado\n");
+		} else{
+			printf("No se aceptan numeros impares\n");
+			i--;
+		}}
+	printf("Los valores del arreglo son: ");
+	for(i=0;i<xd;i++){
+		printf("%d", V1[i]);
 	}
-	for(i=0;i<n;i++){
-		for(j=0;j<n;j++){
-			printf(" %d", M1[i][j]);
-		}
-		printf("\n");
-	}
-	for(i=0;i<n;i++){
-		for(j=0;j<n;j++){
-			suma=suma+M1[i][j];
-		}
-	}
-	printf("La suma es: %d", suma);
 	return 0;
 }
