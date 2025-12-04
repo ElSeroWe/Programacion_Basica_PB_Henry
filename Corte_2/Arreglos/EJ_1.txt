@@ -1,26 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 int main() {
-	int suma=0;
-	int M1[3][3];
-	int i,j;
-	for (i=0;i<3;i++){
-		for(j=0;j<3;j++){
-			printf("Digite valores para la matriz:\n");
-			scanf("%d", &M1[i][j]);
-		}
+	int suma=0,V1[3],i;
+	float prom;
+	for(i=0;i<3;i++){
+		printf("Digite valor para el arreglo: ");
+		scanf("%d",&V1[i]);
 	}
 	for(i=0;i<3;i++){
-		for(j=0;j<3;j++){
-			printf(" %d", M1[i][j]);
-		}
-		printf("\n");
-	}
-	for(i=0;i<3;i++){
-		for(j=0;j<3;j++){
-			suma=suma+M1[i][j];
-		}
-	}
-	printf("La suma es: %d", suma);
+		suma=suma+V1[i];
+	} printf("La suma de elementos da: %d", suma);
+	prom=suma/i;
+	printf("\nEl resultado de el promedio es: %f", prom);
 	return 0;
 }
