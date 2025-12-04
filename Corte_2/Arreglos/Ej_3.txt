@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 int main(){
 	int i,xd,a,j;
 	printf("Digite la cantidad de elementos que va a tener el vector: ");
