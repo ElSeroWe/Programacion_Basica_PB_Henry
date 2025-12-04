@@ -1,0 +1,23 @@
+int main(){
+	int i,xd,a,j;
+	printf("Digite la cantidad de elementos que va a tener el vector: ");
+	scanf("%d",&xd);
+	printf("Digite la cantidad de elementos que va a tener el vector: ");
+	scanf("%d",&a);
+	int V1[xd],V2[a];
+	for(i=0;i<xd;i++){
+		printf("Digite el valor del arreglo en V1: \n");
+		scanf("%d",&V1[i]);}
+	for(j=0;j<xd;j++){
+		printf("Digite el valor del arreglo en V2: \n");
+		scanf("%d",&V2[j]);}
+	printf("Los valores del arreglo 1 son: ");
+	for(i=0;i<xd;i++){
+		printf("%d", V1[i]);
+	}
+	printf("Los valores del arreglo 2 son: ");
+	for(i=0;i<xd;i++){
+		printf("%d", V2[j]);
+	}
+	return 0;
+}
